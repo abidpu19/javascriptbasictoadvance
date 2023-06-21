@@ -8,6 +8,8 @@
       body {
         font-size: 1.25rem;
         line-height: 1.7rem;
+        margin: 40px;
+        background-color: rgb(241 245 249);
       }
       h1,
       h2,
@@ -61,7 +63,108 @@
     <ul>
       <li>The data which an identifier will hold and</li>
       <li>The scope of the identifier</li>
+      <ul>
+        <li><b>let</b></li>
+        <li><b>const</b></li>
+        <li><b>var</b></li>
+      </ul>
     </ul>
+    <p>
+      An identifier declared using ‘let’ keyword has a block scope i.e., it is
+      available only within the block in which it is defined. The value assigned
+      to the identifier can be done either at the time of declaration or later
+      in the code and can also be altered further. All the identifiers known so
+      far vary in their scope and with respect to the data it holds.
+    </p>
+    <kbd>
+      let name="William"; console.log("Welcome to JS course, Mr."+name); let
+      name = "Goth"; /* This will throw an error because the identifier 'name'
+      has been already declared and we are redeclaring the variable, which is
+      not allowed using the 'let' keyword. */ console.log("Welcome to JS course,
+      Mr."+name);
+    </kbd>
+    <p>
+      <b>Note:</b> As a best practice, use the let keyword for identifier
+      declarations that will change their value over time or when the variable
+      need not be accessed outside the code block. For example, in loops,
+      looping variables can be declared using let as they are never used outside
+      the block.
+    </p>
+    <p>
+      The identifier to hold data that does not vary is called 'Constant' and to
+      declare a constant, 'const' keyword is used, followed by an identifier.
+      The value is initialized during the declaration itself and cannot be
+      altered later. The identifiers declared using 'const' keyword have block
+      scope i.e., they exist only in the block of code within which they are
+      defined
+    </p>
+    <kbd>
+      const pi = 3.14; console.log("The value of Pi is: "+pi); pi = 3.141592; /*
+      This will throw an error because the assignment to a const needs to be
+      done at the time of declaration and it cannot be re-initialized. */
+      console.log("The value of Pi is: "+pi);
+    </kbd>
+    <p>
+      <b>Note:</b> As a best practice, the const declaration can be used for
+      string type identifiers or simple number, functions or classes which does
+      not need to be changed or value
+    </p>
+
+    <p>
+      For example, if A4 size paper is referred, then the dimension of the paper
+      remains the same, but its colour can vary. The identifiers declared to
+      hold data that vary are called 'Variables' and to declare a variable, the
+      'var' keyword is optionally used. The value for the same can be
+      initialized optionally. Once the value is initialized, it can be modified
+      any number of times later in the program. Talking about the scope of the
+      identifier declared using ‘var’ keyword, it takes the Function scope i.e.,
+      it is globally available to the Function within which it has been declared
+      and it is possible to declare the identifier name a second time in the
+      same function.
+    </p>
+    <kbd
+      >var name = "William"; console.log("Welcome to JS course, Mr." + name);
+      var name = "Goth"; /* Here, even though we have redeclared the same
+      identifier, it will not throw any error.*/ console.log("Welcome to JS
+      course, Mr." + name);
+    </kbd>
+    <p>
+      <b>Note:</b> As a best practice, use the 'var' keyword for variable
+      declarations for function scope or global scope in the program.
+    </p>
+    <table>
+      <caption>
+        Identifiers
+      </caption>
+      <thead>
+        <tr>
+          <th>Keyword</th>
+          <th>Scope</th>
+          <th>Declaration</th>
+          <th>Assignment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>let</td>
+          <td>Block</td>
+          <td>Redeclaration not allowed</td>
+          <td>Re-assigning allowed</td>
+        </tr>
+        <tr>
+          <td>const</td>
+          <td>Block</td>
+          <td>Redeclaration not allowed</td>
+          <td>Re-assigning not allowed</td>
+        </tr>
+        <tr>
+          <td>var</td>
+          <td>Function</td>
+          <td>Redeclaration allowed</td>
+          <td>Re-assigning allowed</td>
+        </tr>
+      </tbody>
+    </table>
     <script>
       console.log("This data is being loaded from interal");
     </script>
