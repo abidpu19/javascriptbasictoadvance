@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript External Files</title>
+    <style>
+      body {
+        font-size: 1.25rem;
+        line-height: 1.7rem;
+      }
+      h1,
+      h2,
+      h3 {
+        line-height: 2.5rem;
+      }
+      div {
+        background-color: burlywood;
+        /* transform: perspective(30px) scaleZ(5) rotate(2deg); */
+        /* transform: rotate3d(1, 1, 1, 70deg); */
+        width: 80%;
+      }
+      ul > li {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      To model the real-world entities,they have to be named to use it in the
+      JavaScript program
+    </h1>
+    <div>
+      <p>
+        Identifiers are those names that help in naming the elements in
+        JavaScript.i.e firstName; placeOfVisit;
+      </p>
+    </div>
+    <ul>
+      Identifiers should follow below rules:
+      <li>
+        The first character of an identifier should be letters of the alphabet
+        or an underscore (_) or dollar sign ($).
+      </li>
+      <li>
+        Subsequent characters can be letters of alphabets or digits or
+        underscores (_) or a dollar sign ($).
+      </li>
+      <li>
+        Identifiers are case-sensitive. Hence, firstName and FirstName are not
+        the same
+      </li>
+      <b>Note:</b
+      >Reserved keywords are part of programming language syntax and cannot be
+      used as identifiers.
+    </ul>
+    <p>
+      The identifiers in JavaScript can be categorized into three as shown
+      below. They can be declared into specific type based on:
+    </p>
+    <ul>
+      <li>The data which an identifier will hold and</li>
+      <li>The scope of the identifier</li>
+    </ul>
+    <script>
+      console.log("This data is being loaded from interal");
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
