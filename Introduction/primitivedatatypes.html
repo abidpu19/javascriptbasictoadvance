@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primitive Data Types</title>
+    <style>
+      body {
+        font-size: 1.25rem;
+        line-height: 1.7rem;
+        margin: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Primitive Data Types</h1>
+    <p>
+      A "symbol" represents a unique identifier. You can make use of Symbol() to
+      generate a value of this type
+    </p>
+    <kbd> // empid is a new symbol let empid = Symbol(); </kbd>
+    <p>
+      Also, a description of the symbol generated can be provided which can be
+      mostly used as a name during debugging. Example:
+    </p>
+    <kbd
+      >// empid is a symbol with the description "empno" let empid =
+      Symbol("empno");
+    </kbd>
+    <p>
+      Even if various symbols are created with the same description, they are
+      different values. Thus, symbols ensures uniqueness. So the description
+      provided can be considered as just a label.
+    </p>
+    <kbd>
+      let empid1 = Symbol("empno"); let empid2 = Symbol("empno"); alert(empid1==
+      empid2); // false
+    </kbd>
+    <p>
+      Here both the symbols have the same description but are never considered
+      equal.
+    </p>
+    <p>Unlike other values, a symbol value doesn't follow auto-convert.</p>
+    <kbd
+      >let empid = Symbol("empno"); alert(empid); // TypeError: Cannot convert a
+      Symbol value to a string
+    </kbd>
+    <p>
+      This is a rule because strings and symbols are basically different and
+      should not accidentally get converted to the other one. But if it is a
+      must to display the Symbol, then the following can be done: Example:
+    </p>
+    <kbd>
+      let empid = Symbol("empno"); alert(empid.toString()); // Symbol(empno),
+      now it works OR //use description let empid = Symbol("empno");
+      alert(empid.description); // empno
+    </kbd>
+    <p>
+      Global symbols So far you know that symbols remain unique even if they
+      have the same name. But at times, there may be a situation where you may
+      want the symbols with same name to be same entities. In such a situation,
+      symbols can be created in a global symbol registry and access them later
+      and ensure that repeated accesses by the same name return exactly the same
+      symbol. To read a symbol from the registry, use Symbol.for(key) which
+      checks if there’s a symbol described as key, then returns it, otherwise
+      creates a new symbol Symbol.for(key) and stores it in the registry by the
+      given key.
+    </p>
+    <kbd
+      >// read from the global registry let empid = Symbol.for("empno"); // if
+      the symbol did not exist, it is created // read it again (maybe from
+      another part of the code) let empidAgain= Symbol.for("empid"); // the same
+      symbol alert( empid === empidAgain ); // false
+    </kbd>
+  </body>
+</html>
