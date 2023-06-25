@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Operators Demo</title>
+    <style>
+      body {
+        padding-top: 10px;
+      }
+      .blinking {
+        animation: blinkingText 1.8s infinite;
+        background-color: yellow;
+        color: red;
+      }
+      @keyframes blinkingText {
+        0% {
+          color: #000;
+        }
+        49% {
+          color: transparent;
+        }
+        50% {
+          color: transparent;
+        }
+        99% {
+          color: transparent;
+        }
+        100% {
+          color: #000;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="container-fluid">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Body Temperature</h3>
+      </div>
+
+      <div class="panel-body">
+        <p>
+          Your body temperature is higher than the normal:
+          <span class="blinking">
+            <script>
+              let tempFahren = 99;
+              const NORMAL_FAHREN = 98.6;
+              let tempCelsius;
+              const THIRTYTWO = 32;
+              const TEMP = 1.8;
+              tempCelsius = (tempFahren - THIRTYTWO) / TEMP;
+              let fever = tempFahren > NORMAL_FAHREN;
+              document.write(fever);
+              document.write("<br/>");
+              document.write("Your temperature is Celsius  : " + tempCelsius);
+              document.write("<br/>");
+              document.write(typeof fever);
+              document.write("<br/>");
+              document.write(typeof tempFahren);
+            </script>
+          </span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
