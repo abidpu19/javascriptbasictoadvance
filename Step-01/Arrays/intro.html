@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays in Typescript</title>
+    <style>
+      body {
+        margin: 40px;
+        font-size: 1.25rem;
+        line-height: 1.7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      An array is used to store multiple values in a single variable. We can
+      easily access the values stored in an array using the index position of
+      the data stored in the array.
+    </h2>
+    <p>
+      Typescript array is an object to store multiple values in a variable with
+      type annotation. They are similar to JavaScript arrays.
+    </p>
+    <!-- Example -->
+    <p>
+      <b>Cearting an Array</b>
+      Arrays can be created using one of the below mehtods
+    </p>
+    <ul>
+      <li>
+        Using datatype declations
+        <ul>
+          <li>let furist:string[] = ["Apple","orange"]</li>
+        </ul>
+      </li>
+      <li>
+        Using Array&les;type&gt; declaration
+        <ul>
+          <li>let furist:&les;string&gt; = ["Apple","Orange"]</li>
+        </ul>
+      </li>
+      <li>
+        Using any[] declaration
+        <ul>
+          <li>let products:any[] = ["Mango","Iphone"]</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>
+      A Typescript array defined with a specific type does not accept data of a
+      different type. Typescript arrays can be accessed and used much like
+      JavaScript arrays. Next, we will see how to push values inside an array
+    </p>
+    <h2>Array Function - Built in</h2>
+    <p>
+      The Array.forEach() function takes another function as parameter and
+      invokes the function for every item in the array. Also while invoking the
+      function, it also will pass the item as a parameter to the callback
+      function.
+      <code
+        >Array.forEach(callback); // callback is the function that gets invoked
+        for each item of the array
+      </code>
+    </p>
+    <p>
+      <b>Observe:</b> <br />
+      Array.forEach() is a built-in array function that requires a function to
+      be passed as a parameter. In the first output, the display function gets
+      executed for each iteration. In the second, we have passed an anonymous
+      function to the forEach(). For every iteration, forEach() will pass an
+      array element to the anonymous function. Here the anonymous function takes
+      a Manufacturer as the parameter and logs it to console.
+    </p>
+    <h2>map() Function</h2>
+    <p>
+      Just Like forEach(), map() also iterates over each element in the array
+      and invokes a function. But the difference is, forEach() just invokes
+      function on each item in the array. It does not create a new array, map()
+      array function generates a new array. Here is a simple example
+      demonstrating the implementation of map() function
+    </p>
+    <h2>filter()</h2>
+    <p>
+      What if we want to get all words whose length is greater than 5? For this
+      we can use filter(). filter also takes callback function as a parameter.
+      It iterates over each element and creates a sub array containing the
+      elements that satisfy the condition given in the callback. Here is a
+      simple example demonstrating the implementation of filter() function
+    </p>
+    <h2>find()</h2>
+    <p>
+      Array has a method called find(). It returns the first element in the
+      array which satisfies a given condition. It takes a callback. It executes
+      the callback for each element in the array. If the callback returns true,
+      then find returns the element for which the callback returned true and
+      stops further iteration. If it was false for all elements, it returns
+      undefined. Here is a simple example demonstrating the implementation of
+      find() function
+    </p>
+  </body>
+</html>
