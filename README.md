@@ -1,2 +1,2 @@
-# javascriptbasictoadvance
-Learn Complete Javascript functions algorithm best practices
+# TypeScriptbasictoadvance
+Learn Complete Typescript functions algorithm best practices
